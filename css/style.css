@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: black;
+    background-image:
+        radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+        radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+#main-container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    height: 5.5rem;
+    position: relative;
+}
+
+form {
+    height: 100%;
+}
+
+.form-group {
+    float: right;
+    height: 80%;
+    position: relative;
+    margin: 2.5rem 3.5rem 0 0;
+}
+
+.submit-btn {
+    position: absolute;
+    top: 27%;
+    left: 6%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.fa-search {
+    color: #f3f3f3;
+    font-size: 1.8rem;
+}
+
+input[type='text'] {
+    width: 24rem;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0 0 0.3rem 4.5rem;
+    color: #ffffff;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+}
+
+input[type='text']::placeholder {
+    color: #f3f3f3;
+}
+
+.general-info {
+    padding-right: 5px;
+}
+
+.error-msg {
+    display: hidden;
+    position: absolute;
+    left: 2rem;
+    color: #ff3333;
+    font-size: 15px;
+    display: none;
+}
+
+.main-weather-display {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    width: 90%;
+    margin-left: 40%;
+    color: #f3f3f3;
+}
+
+.condition {
+    font-size: 2.2rem;
+    letter-spacing: 0.1rem;
+    padding-left: 0.3rem;
+}
+
+img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.location {
+    font-size: 4rem;
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+}
+
+.degrees {
+    font-size: 15rem;
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.degrees::after {
+    content: '\00B0 F';
+    font-size: 3rem;
+    position: absolute;
+    top: 1.1rem;
+}
+
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    border-left: 0.2rem solid rgba(255, 255, 255, 0.5);
+    top: 45%;
+    left: 22.5rem;
+    height: 10rem;
+    padding-left: 3.5rem;
+    justify-content: space-between;
+}
+
+.feels-like {
+    position: relative;
+}
+
+.feels-like::after {
+    content: '\00B0 F';
+    position: absolute;
+    bottom: 0.1rem;
+    left: 16.4rem;
+    font-size: 1rem;
+}
+
+.humidity::after {
+    content: '%';
+}
+
+.fade-in {
+    animation: fadeIn 0.2s;
+}
+
+.fade-in2 {
+    animation: fadeIn2 1.1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        top: 6rem;
+    }
+
+    100% {
+        opacity: 0.5;
+        top: 4.4rem;
+    }
+}
+
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0.1;
+        transform: scale(0.9, 0.9);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
